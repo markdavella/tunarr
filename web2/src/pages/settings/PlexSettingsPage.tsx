@@ -270,6 +270,7 @@ export default function PlexSettingsPage() {
       });
     },
     onSuccess: () => {
+      console.log('invalidate');
       return queryClient.invalidateQueries({
         queryKey: ['settings', 'plex-servers'],
       });
