@@ -1,5 +1,10 @@
 import { EditChannelTabs } from '@/components/channel_config/EditChannelTabPanel.tsx';
+import { useChannelSuspense } from '@/hooks/useChannels.ts';
+import { Route } from '@/routes/channels_/$channelId/edit/index.tsx';
+import Edit from '@mui/icons-material/Edit';
+import { Box, Button, Stack } from '@mui/material';
 import Typography from '@mui/material/Typography';
+import { Link } from '@tanstack/react-router';
 import { useState } from 'react';
 import Breadcrumbs from '../../components/Breadcrumbs.tsx';
 import { EditChannelForm } from '../../components/channel_config/EditChannelForm.tsx';
@@ -8,11 +13,6 @@ import {
   ChannelEditContext,
   ChannelEditContextState,
 } from './EditChannelContext.ts';
-import { Route } from '@/routes/channels_/$channelId/edit/index.tsx';
-import { useChannelSuspense } from '@/hooks/useChannels.ts';
-import Edit from '@mui/icons-material/Edit';
-import { Link } from '@tanstack/react-router';
-import { Stack, Box, Button } from '@mui/material';
 
 type Props = {
   initialTab?: EditChannelTabs;
